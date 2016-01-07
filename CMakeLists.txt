@@ -14,7 +14,8 @@ ENDIF(WIN32 OR WIN64)
 INCLUDE_DIRECTORIES(${GLFW3_INCLUDE_DIR}
                     ${OPENGL_INCLUDE_DIRS}
                     ${CMAKE_CURRENT_SOURCE_DIR}
-                    ${GLEW_INCLUDE_PATH})
+                    ${GLEW_INCLUDE_PATH}
+                    ${PROJECT_SOURCE_DIR}/hg-core/ext)
 
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
@@ -24,7 +25,7 @@ LINK_DIRECTORIES(
         ${GLFW3_LIBRARY_DIR}
 )
 
-set(SOURCE_FILES main.cpp hg-core/app/window.cpp hg-core/app/window.h hg-core/graphics/shader/GLSLShader.cpp hg-core/graphics/shader/GLSLShader.h)
+set(SOURCE_FILES main.cpp hg-core/app/window.cpp hg-core/app/window.h hg-core/graphics/shader/GLSLShader.cpp hg-core/graphics/shader/GLSLShader.h hg-core/maths/maths.cpp hg-core/maths/maths.h)
 add_executable(hg ${SOURCE_FILES})
 
 TARGET_LINK_LIBRARIES( hg
