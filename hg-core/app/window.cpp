@@ -31,6 +31,7 @@ namespace hg{
             }
 
             glfwMakeContextCurrent(m_Windows);
+            glfwSwapInterval(0);
             return true;
 
         }
