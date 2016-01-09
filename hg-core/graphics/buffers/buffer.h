@@ -15,15 +15,17 @@ namespace hg{ namespace buffer{
         {
         private:
             //vbo id
-            GLuint id;
-            vertexData data[VBOSIZE];
+            GLuint m_id;
+            vertexData m_data[VBOSIZE];
+            int m_used_size;
+            bool m_is_corect;
 
         public:
             buffer();
             ~buffer();
             void bind();
             void unbind();
-
+            bool init();
         };
 
     }
