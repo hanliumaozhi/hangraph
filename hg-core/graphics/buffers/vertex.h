@@ -8,7 +8,7 @@
 #include "../../maths/maths.h"
 
 
-namespace hg{ namespace buffer{
+namespace hg{ namespace graphics{
         struct vertexData{
             hg::maths::vec3 position;
             hg::maths::vec3 color;
