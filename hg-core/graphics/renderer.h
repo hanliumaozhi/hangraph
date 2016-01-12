@@ -6,13 +6,19 @@
 #define HG_RENDERER_H
 
 
+#include "buffers/vertexArray.h"
+
+
 namespace hg{ namespace graphics {
         class renderer {
         private:
+            vertexArray m_vao;
+
 
         public:
             renderer();
             ~renderer();
+            void draw();
         };
     }
 }
