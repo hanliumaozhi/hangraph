@@ -8,8 +8,8 @@ namespace hg{ namespace graphics {
 
             vertexArray::vertexArray(){
                 glGenVertexArrays(1, &m_id);
-                bind();
-                m_buffer = std::make_shared<buffer>();
+                //bind();
+                //m_buffer = std::make_shared<buffer>();
             };
 
             vertexArray::~vertexArray(){
