@@ -10,6 +10,8 @@ namespace hg{ namespace graphics{
             m_buffer = buffer;
             m_shader = hg::shader::ShaderFactory::shader_maker(type);
             m_vao = std::make_shared<vertexArray>();
+
+            this->init();
         }
 
         bool renderer::init() {
@@ -22,6 +24,12 @@ namespace hg{ namespace graphics{
             glEnableVertexAttribArray(cube_shader["Color"]);
             m_shader->UnUse();
             m_vao->unbind();
+
+            if(glGetError() == GL_NO_ERROR){
+                return true;
+            }else{
+                return false;
+            }
 
         }
     }
