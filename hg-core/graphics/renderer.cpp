@@ -17,11 +17,11 @@ namespace hg{ namespace graphics{
         bool renderer::init() {
             m_vao->bind();
             m_shader->Use();
-            glVertexAttribPointer(cube_shader["Vertex"], 3, GL_FLOAT, GL_FALSE, 0, 0);
-            glVertexAttribPointer(cube_shader["Color"], 3, GL_FLOAT, GL_TRUE, 0, (GLubyte *)(sizeof(hg::maths::vec3)*VBOSIZE));
+            glVertexAttribPointer(m_shader["Vertex"], 3, GL_FLOAT, GL_FALSE, 0, 0);
+            glVertexAttribPointer(m_shader["Color"], 3, GL_FLOAT, GL_TRUE, 0, (GLubyte *)(sizeof(hg::maths::vec3)*VBOSIZE));
 
-            glEnableVertexAttribArray(cube_shader["Vertex"]);
-            glEnableVertexAttribArray(cube_shader["Color"]);
+            glEnableVertexAttribArray(m_shader["Vertex"]);
+            glEnableVertexAttribArray(m_shader["Color"]);
             m_shader->UnUse();
             m_vao->unbind();
 
@@ -32,5 +32,15 @@ namespace hg{ namespace graphics{
             }
 
         }
+
+        void renderer::draw() {
+
+        }
+
+        void renderer::~renderer() {
+            m_shader->DeleteShaderProgram();
+        }
+
+
     }
 }
