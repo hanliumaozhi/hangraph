@@ -15,6 +15,8 @@
 
 #include "../Common.h"
 
+#include "../maths/maths.h"
+
 
 namespace hg{ namespace graphics {
         class renderer {
@@ -22,12 +24,13 @@ namespace hg{ namespace graphics {
             std::shared_ptr<vertexArray> m_vao;
             std::shared_ptr<buffer> m_buffer;
             std::shared_ptr<hg::shader::GLSLShader> m_shader;
+            int m_Draw_type;
             bool init();
 
         public:
-            renderer(const std::string &type, std::shared_ptr<buffer> buffer);
+            renderer(const std::string &type, std::shared_ptr<vertexArray> vao, std::shared_ptr<buffer> buffer);
             ~renderer();
-            void draw();
+            void draw(hg::maths::mat4& MVP);
         };
     }
 }

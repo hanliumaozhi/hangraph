@@ -23,6 +23,6 @@ namespace hg{ namespace graphic {
             m_P = glm::perspective(45.0f, (GLfloat)w / h, 1.f, 1000.f);
         }
 
-        void camera::~camera() { }
+        camera::~camera() { }
     }
 }

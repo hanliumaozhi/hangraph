@@ -5,8 +5,10 @@
 #ifndef HG_LOGGER_H
 #define HG_LOGGER_H
 
-namespace hg{ namespace utils{
+namespace hg {
+    namespace utils {
 
+    }
 }
 
 

@@ -30,6 +30,7 @@ namespace hg{ namespace graphics{
             bool flush();
             void set_item(hg::maths::vec3 & position, hg::maths::vec3 & color, int index);
             void set_used_size(int size);
+            GLsizei get_used_size();
         };
 
     }

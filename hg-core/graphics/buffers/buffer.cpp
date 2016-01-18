@@ -57,5 +57,9 @@ namespace hg{ namespace graphics{
         void buffer::set_used_size(int size){
             m_used_size = size;
         }
+
+        GLsizei buffer::get_used_size() {
+            return m_used_size;
+        }
     }
 }
