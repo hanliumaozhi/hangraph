@@ -10,7 +10,7 @@
 #include "../../maths/maths.h"
 
 
-namespace hg{ namespace graphic {
+namespace hg{ namespace graphics {
 
         class camera {
         private:

@@ -5,6 +5,7 @@
 #ifndef HG_WINDOW_H
 #define HG_WINDOW_H
 
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 namespace hg {

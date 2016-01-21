@@ -5,9 +5,11 @@
 #ifndef HG_BUFFER_H
 #define HG_BUFFER_H
 
-#include <GL/glew.h>
+
 #include "../../maths/maths.h"
 #include "../../Common.h"
+
+#include <GL/glew.h>
 
 namespace hg{ namespace graphics{
 

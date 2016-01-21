@@ -30,7 +30,7 @@ LINK_DIRECTORIES(
         ${GLFW3_LIBRARY_DIR}
 )
 
-set(SOURCE_FILES main.cpp hg-core/app/window.cpp hg-core/app/window.h hg-core/graphics/shader/GLSLShader.cpp hg-core/graphics/shader/GLSLShader.h hg-core/maths/maths.cpp hg-core/maths/maths.h hg-core/graphics/shader/shader_str.cpp hg-core/graphics/shader/shader_str.h hg-core/utils/timer/timer.cpp hg-core/utils/timer/timer.h hg-core/graphics/buffers/buffer.cpp hg-core/graphics/buffers/buffer.h hg-core/graphics/buffers/vertex.h hg-core/Common.h hg-core/graphics/buffers/vertexArray.cpp hg-core/graphics/buffers/vertexArray.h hg-core/graphics/shader/shaderFactory.h hg-core/graphics/renderer.cpp hg-core/graphics/renderer.h hg-core/utils/logger/logger.cpp hg-core/utils/logger/logger.h hg-core/graphics/camera/camera.cpp hg-core/graphics/camera/camera.h)
+set(SOURCE_FILES main.cpp hg-core/app/window.cpp hg-core/app/window.h hg-core/graphics/shader/GLSLShader.cpp hg-core/graphics/shader/GLSLShader.h hg-core/maths/maths.cpp hg-core/maths/maths.h hg-core/graphics/shader/shader_str.cpp hg-core/graphics/shader/shader_str.h hg-core/utils/timer/timer.cpp hg-core/utils/timer/timer.h hg-core/graphics/buffers/buffer.cpp hg-core/graphics/buffers/buffer.h hg-core/graphics/buffers/vertex.h hg-core/Common.h hg-core/graphics/buffers/vertexArray.cpp hg-core/graphics/buffers/vertexArray.h hg-core/graphics/shader/shaderFactory.h hg-core/graphics/renderer.cpp hg-core/graphics/renderer.h hg-core/utils/logger/logger.cpp hg-core/utils/logger/logger.h hg-core/graphics/camera/camera.cpp hg-core/graphics/camera/camera.h hg-core/graphics/shader/shaderFactory.cpp)
 add_executable(hg ${SOURCE_FILES})
 
 TARGET_LINK_LIBRARIES( hg

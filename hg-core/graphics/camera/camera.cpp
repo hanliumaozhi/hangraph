@@ -4,7 +4,7 @@
 
 #include "camera.h"
 
-namespace hg{ namespace graphic {
+namespace hg{ namespace graphics {
         camera::camera():m_rX(0), m_rY(0), m_dist(-10) {
             m_P = hg::maths::mat4(1);
             m_MV = hg::maths::mat4(1);
