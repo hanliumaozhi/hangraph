@@ -13,6 +13,7 @@ namespace hg{ namespace graphics{
             }else{
                 m_is_corect = true;
             }
+            this->init();
         }
         buffer::~buffer() {
             glDeleteBuffers(1, &m_id);

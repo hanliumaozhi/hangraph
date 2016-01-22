@@ -16,6 +16,8 @@ namespace hg{ namespace graphics {
         private:
             hg::maths::mat4 m_P;
             hg::maths::mat4 m_MV;
+            hg::maths::mat4 T;
+            hg::maths::mat4 Rx;
             float m_rX;
             float m_rY;
             float m_dist;

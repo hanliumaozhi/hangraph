@@ -11,8 +11,8 @@ namespace hg{ namespace graphics {
         }
 
         void camera::cal_mvp(hg::maths::mat4 &MVP) {
-            hg::maths::mat4 T = hg::maths::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, m_dist));
-            hg::maths::mat4 Rx = hg::maths::rotate(T, m_rX, glm::vec3(1.0f, 0.0f, 0.0f));
+            T = hg::maths::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, m_dist));
+            Rx = hg::maths::rotate(T, m_rX, glm::vec3(1.0f, 0.0f, 0.0f));
             m_MV = hg::maths::rotate(Rx, m_rY, glm::vec3(0.0f, 1.0f, 0.0f));
             MVP = m_P*m_MV;
         }
