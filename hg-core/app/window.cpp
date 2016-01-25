@@ -53,5 +53,9 @@ namespace hg{
         void window::Clear() const {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         }
+
+        GLFWwindow* window::GetWindow(){
+            return m_Windows;
+        }
     }
 }
