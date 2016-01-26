@@ -48,7 +48,7 @@ namespace hg{ namespace graphics {
             if ((button == GLFW_MOUSE_BUTTON_LEFT || button == GLFW_MOUSE_BUTTON_RIGHT) && action == GLFW_PRESS){
                 glfwGetCursorPos(window, &m_old_x, &m_old_y);
             }
-            if (button == GLFW_MOUSE_BUTTON_MIDDLE){
+            if (button == GLFW_MOUSE_BUTTON_MIDDLE && action == GLFW_PRESS){
                 m_state = true;
             }else{
                 m_state = false;
