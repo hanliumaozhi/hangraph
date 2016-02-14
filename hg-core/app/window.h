@@ -36,13 +36,7 @@ namespace hg {
             private:
 
                 bool Init();
-
-
-
         };
-
-
-
     }
 }
 

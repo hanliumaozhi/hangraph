@@ -25,6 +25,7 @@ namespace hg{ namespace graphics {
             static double m_old_x;
             static double m_old_y;
             static bool m_state;
+            static bool m_is_press;
 
         public:
             explicit camera(GLFWwindow* window){

@@ -22,6 +22,7 @@ namespace hg{ namespace graphics {
         double camera::m_old_x = 0.0;
         double camera::m_old_y = 0.0;
         bool camera::m_state = false;
+        bool camera::m_is_press = false;
 
         void camera::cal_mvp(hg::maths::mat4 &MVP) {
             T = hg::maths::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, m_dist));
@@ -53,12 +54,17 @@ namespace hg{ namespace graphics {
             }else{
                 m_state = false;
             }
+            if ((button == GLFW_MOUSE_BUTTON_RIGHT || button == GLFW_MOUSE_BUTTON_LEFT) && action == GLFW_PRESS){
+                m_is_press = true;
+            }else{
+                m_is_press = false;
+            }
         }
 
         void camera::cursor_position_callback(GLFWwindow* window, double xpos, double ypos){
             if(m_state){
                 m_dist *= (1+ (ypos - m_old_y)/ 60.0);
-            }else{
+            }else if (m_is_press){
                 m_rY += (xpos - m_old_x) / 5.0;
                 m_rX += (ypos - m_old_y) / 5.0;
             }
