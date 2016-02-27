@@ -7,7 +7,7 @@
 
 namespace hg{
     namespace app{
-        window::window(const char *title, int weight, int height) {
+        window::window(std::string title, int weight, int height) {
             m_Title = title;
             m_Width = weight;
             m_Height = height;
@@ -24,7 +24,7 @@ namespace hg{
             if(!glfwInit()){
                 return false;
             }
-            m_Windows = glfwCreateWindow(m_Width, m_Height, m_Title, NULL, NULL);
+            m_Windows = glfwCreateWindow(m_Width, m_Height, m_Title.c_str(), NULL, NULL);
             if(!m_Windows){
                 glfwTerminate();
                 return false;
