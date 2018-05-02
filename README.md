@@ -1,6 +1,11 @@
 # hangraph
-## install libraries and dependencies on ubuntu
+## install libraries and dependencies on ubuntu 18.04
 ### install opengl lib
-`sudo aptitude install pkg-config libglew-dev libglfw3-dev xorg-dev libglu1-mesa-dev`
+
+`mesa -> free implementation of the OpenGL API "sudo apt install libgl1-mesa-dev"`
+
+`glew -> The OpenGL Extension Wrangler Library "sudo apt install libglew-dev"`
+
+`glfw3 -> portable library for OpenGL, window and input "sudo apt install libglfw3-dev"`  
 ### install boost lib
-`sudo aptitude install libboost{rev_no}-all-dev`
+` sudo apt install libboost-dev`

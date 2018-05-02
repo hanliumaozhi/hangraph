@@ -9,10 +9,11 @@ ELSE(WIN32 OR WIN64)
     #add glew lib
     FIND_PACKAGE( GLEW REQUIRED)
     #add glfw lib
-    FIND_PACKAGE(PkgConfig REQUIRED)
-    pkg_search_module(GLFW REQUIRED glfw3)
+    #FIND_PACKAGE(PkgConfig REQUIRED)
+    #pkg_search_module(GLFW REQUIRED glfw3)
+    find_package(glfw3 REQUIRED)
     #add boost lib
-    FIND_PACKAGE(Boost COMPONENTS system filesystem REQUIRED)
+    FIND_PACKAGE(Boost REQUIRED)
 ENDIF(WIN32 OR WIN64)
 
 INCLUDE_DIRECTORIES(${GLFW3_INCLUDE_DIR}
@@ -30,11 +31,11 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 #        ${GLFW3_LIBRARY_DIR}
 #)
 
-set(SOURCE_FILES main.cpp hg-core/app/window.cpp hg-core/app/window.h hg-core/graphics/shader/GLSLShader.cpp hg-core/graphics/shader/GLSLShader.h hg-core/maths/maths.cpp hg-core/maths/maths.h hg-core/graphics/shader/shader_str.cpp hg-core/graphics/shader/shader_str.h hg-core/utils/timer/timer.cpp hg-core/utils/timer/timer.h hg-core/graphics/buffers/buffer.cpp hg-core/graphics/buffers/buffer.h hg-core/graphics/buffers/vertex.h hg-core/Common.h hg-core/graphics/buffers/vertexArray.cpp hg-core/graphics/buffers/vertexArray.h hg-core/graphics/shader/shaderFactory.h hg-core/graphics/renderer.cpp hg-core/graphics/renderer.h hg-core/utils/logger/logger.cpp hg-core/utils/logger/logger.h hg-core/graphics/camera/camera.cpp hg-core/graphics/camera/camera.h hg-core/graphics/shader/shaderFactory.cpp hg-core/graphics/scene.cpp hg-core/graphics/scene.h)
+set(SOURCE_FILES main.cpp hg-core/app/window.cpp hg-core/app/window.h hg-core/graphics/shader/GLSLShader.cpp hg-core/graphics/shader/GLSLShader.h hg-core/maths/maths.cpp hg-core/maths/maths.h hg-core/graphics/shader/shader_str.cpp hg-core/graphics/shader/shader_str.h hg-core/utils/timer/timer.cpp hg-core/utils/timer/timer.h hg-core/graphics/buffers/buffer.cpp hg-core/graphics/buffers/buffer.h hg-core/graphics/buffers/vertex.h hg-core/Common.h hg-core/graphics/buffers/vertexArray.cpp hg-core/graphics/buffers/vertexArray.h hg-core/graphics/shader/shaderFactory.h hg-core/graphics/renderer.cpp hg-core/graphics/renderer.h hg-core/utils/logger/logger.cpp hg-core/utils/logger/logger.h hg-core/graphics/camera/camera.cpp hg-core/graphics/camera/camera.h hg-core/graphics/shader/shaderFactory.cpp hg-core/graphics/scene.cpp hg-core/graphics/scene.h main.cpp)
 add_executable(hg ${SOURCE_FILES})
 
 TARGET_LINK_LIBRARIES( hg
                         ${OPENGL_LIBRARY}
                         ${GLEW_LIBRARY}
-                        ${GLFW_LIBRARIES}
+                        glfw
                         ${Boost_LIBRARIES})
